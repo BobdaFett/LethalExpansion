@@ -319,11 +319,12 @@ namespace LethalExpansion.Patches
                                                 {
                                                     LethalExpansion.Log.LogWarning($"{wci.itemProperties.name} Whoopie Cushion Trigger not found, please add one");
                                                 }
-                                                else if (triggerObject.gameObject.GetComponent<WhoopieCushionTrigger>() == null)
-                                                {
-                                                    WhoopieCushionTrigger trigger = triggerObject.gameObject.AddComponent<WhoopieCushionTrigger>();
-                                                    trigger.itemScript = wci;
-                                                }
+                                                // TODO Not sure what this does.
+                                                // else if (triggerObject.gameObject.GetComponent<WhoopieCushionTrigger>() == null)
+                                                // {
+                                                //     WhoopieCushionTrigger trigger = triggerObject.gameObject.AddComponent<WhoopieCushionTrigger>();
+                                                //     trigger.itemScript = wci;
+                                                // }
                                                 break;
                                         }
 

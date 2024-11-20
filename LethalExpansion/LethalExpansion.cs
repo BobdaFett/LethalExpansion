@@ -44,13 +44,13 @@ namespace LethalExpansion
     {
         private const string PluginGUID = "LethalExpansion";
         private const string PluginName = "LethalExpansion";
-        private const string VersionString = "1.3.46";
+        private const string VersionString = "1.3.47";
         public static readonly Version ModVersion = new Version(VersionString);
         /*private readonly Version[] CompatibleModVersions = {
             new Version(1, 3, 11)
         };*/
         //show a warning if the game version is not in this array
-        public static readonly int[] CompatibleGameVersions = { 50 };
+        public static readonly int[] CompatibleGameVersions = { 68 };
 
         //compatibility flags, use the mod GUID
         private readonly Dictionary<string, compatibility> CompatibleMods = new Dictionary<string, compatibility>

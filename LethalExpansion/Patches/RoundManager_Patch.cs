@@ -180,21 +180,22 @@ namespace LethalExpansion.Patches
                     RoundManager.Instance.dungeonGenerator.Generator.DungeonFlow.GlobalProps.First(p => p.ID == 1231).Count = new IntRange(RoundManager.Instance.currentLevel.GetFireExitAmountOverwrite(), RoundManager.Instance.currentLevel.GetFireExitAmountOverwrite());
                 }
 
-                if (id < __instance.firstTimeDungeonAudios.Length && __instance.firstTimeDungeonAudios[id] != null)
-                {
-                    EntranceTeleport[] array = GameObject.FindObjectsOfType<EntranceTeleport>();
-                    if (array != null && array.Length != 0)
-                    {
-                        for (int j = 0; j < array.Length; j++)
-                        {
-                            if (array[j].isEntranceToBuilding)
-                            {
-                                array[j].firstTimeAudio = __instance.firstTimeDungeonAudios[id];
-                                array[j].dungeonFlowId = id;
-                            }
-                        }
-                    }
-                }
+                // TODO Not sure what this does.
+                // if (id < __instance.firstTimeDungeonAudios.Length && __instance.firstTimeDungeonAudios[id] != null)
+                // {
+                //     EntranceTeleport[] array = GameObject.FindObjectsOfType<EntranceTeleport>();
+                //     if (array != null && array.Length != 0)
+                //     {
+                //         for (int j = 0; j < array.Length; j++)
+                //         {
+                //             if (array[j].isEntranceToBuilding)
+                //             {
+                //                 array[j].firstTimeAudio = __instance.firstTimeDungeonAudios[id];
+                //                 array[j].dungeonFlowId = id;
+                //             }
+                //         }
+                //     }
+                // }
             }
             __instance.dungeonGenerator.Generator.ShouldRandomizeSeed = false;
             __instance.dungeonGenerator.Generator.Seed = __instance.LevelRandom.Next();

@@ -1,4 +1,4 @@
-﻿using DunGen;
+﻿// using DunGen;
 using HarmonyLib;
 using LethalExpansion.Extenders;
 using LethalExpansion.Utils;
@@ -861,7 +861,8 @@ namespace LethalExpansion.Patches
                                                 moonRouteConfirm.displayText = $"Routing autopilot to {newMoon.PlanetName}.\r\nYour new balance is [playerCredits].\r\n\r\n{newMoon.BoughtComment}\r\n\r\n";
                                                 moonRouteConfirm.clearPreviousText = true;
                                                 moonRouteConfirm.buyRerouteToMoon = StartOfRound.Instance.levels.Length;
-                                                moonRouteConfirm.lockedInDemo = true;
+                                                // lockedInDemo no longer exists - assumed no more demo.
+                                                // moonRouteConfirm.lockedInDemo = true;
                                                 moonRouteConfirm.itemCost = newMoon.RoutePrice;
 
                                                 TerminalNode moonRoute = ScriptableObject.CreateInstance<TerminalNode>();
@@ -871,7 +872,7 @@ namespace LethalExpansion.Patches
                                                 moonRoute.clearPreviousText = true;
                                                 moonRoute.buyRerouteToMoon = -2;
                                                 moonRoute.displayPlanetInfo = StartOfRound.Instance.levels.Length;
-                                                moonRoute.lockedInDemo = true;
+                                                // moonRoute.lockedInDemo = true;
                                                 moonRoute.overrideOptions = true;
                                                 moonRoute.itemCost = newMoon.RoutePrice;
                                                 moonRoute.terminalOptions = new CompatibleNoun[]
